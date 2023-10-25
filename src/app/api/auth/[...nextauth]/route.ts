@@ -17,8 +17,7 @@ const handler = NextAuth({
         },
         async authorize(credentials, req){
             await connectDB()
-            console.log(credentials);
-
+            // console.log(credentials);
             
             const userFound = await User.findOne({email: credentials?.email}).select('+password');
             if(!userFound) throw new Error('User not found');
@@ -27,7 +26,7 @@ const handler = NextAuth({
 
             if(!passswordMatch) throw new Error('Incorrect password');
 
-            console.log(userFound);
+            // console.log(userFound);
             
             return userFound;
         }

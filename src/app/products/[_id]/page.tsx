@@ -29,13 +29,8 @@ export default async function Detail ({params}: any) {
     const {_id} = params
 
     const prod = await fetchId(_id);
-
-
+    
     const related = await fetchRelated()
-
-    
-
-    
 
     return (
         <div>
