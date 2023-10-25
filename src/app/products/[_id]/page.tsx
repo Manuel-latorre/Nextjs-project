@@ -18,7 +18,7 @@ async function fetchRelated(): Promise<Product[]> {
   }
 
 
-export async function fetchId(_id: Product) {
+async function fetchId(_id: Product) {
     return await fetch(`https://private-radtek-server.onrender.com/product/${_id}`)
     .then(res => res.json())
   }
