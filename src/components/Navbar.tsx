@@ -17,13 +17,13 @@ function Navbar() {
     <nav className={style.navbar}>
       <div>
         <Link href='/'>
-          <h1>Navbar</h1>
+          <h1 style={{color:'white'}}>Navbar</h1>
         </Link>
       </div>
       <div>
-        <Link style={{margin:5}} href='/keyboards'>Keyboards</Link>
-        <Link style={{margin:5}} href='/headphones'>Headphones</Link>
-        <Link style={{margin:5}} href='/mouses'>Mouses</Link>
+        <Link style={{margin:5, color:'white'}} href='/keyboards'>Keyboards</Link>
+        <Link style={{margin:5, color:'white'}} href='/headphones'>Headphones</Link>
+        <Link style={{margin:5, color:'white'}} href='/mouses'>Mouses</Link>
       </div>
 
       {
