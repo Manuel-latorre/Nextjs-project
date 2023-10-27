@@ -5,11 +5,13 @@ import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from 'axios'
 import style from './ButtonPay.module.css'
 
+const {PUBLIC_KEY_MERCADOPAGO} = process.env
+
 export default function ButtonPay ()  {
 
     const [ preferenceId, setPreferenceId ]  = useState(null);
     
-    initMercadoPago('TEST-0838d460-5b5f-49ac-812c-d1e7cb7aba08');
+    initMercadoPago(PUBLIC_KEY_MERCADOPAGO as string);
 
     const createPreference = async () => {
         try {
